@@ -1,0 +1,126 @@
+html {
+  background-color: black;
+  overflow: hidden;
+}
+@keyframes slideIn {
+  from {
+    top: 0rem;
+    transform: scale(0);
+  }
+  to {
+    top: 7rem;
+    transform: scale(2);
+    visibility: hidden;
+  }
+}
+html img {
+  animation: slideIn 4s ease-out 0s 1 forwards;
+  position: relative;
+}
+html div.columns {
+  display: flex;
+}
+html div.columns div.col {
+  width: 100%;
+  border-radius: 2px;
+  margin: 0 20px 0 20px;
+  visibility: hidden;
+}
+@keyframes leftBox {
+  from {
+    top: 0rem;
+    visibility: hidden;
+  }
+  to {
+    top: -18rem;
+    height: 90vh;
+    visibility: visible;
+  }
+}
+@keyframes idleftBox {
+  95% {
+    background: linear-gradient(#d391ffba, #918fff8c), url(./Riley.jpg) center;
+    background-blend-mode: overlay;
+    background-position: 0% 50%;
+    background-size: cover;
+  }
+  100% {
+    background: linear-gradient(#918fff8c, #5d5aff8c), url(./Riley.jpg) center;
+    background-blend-mode: overlay;
+    background-position: 0% 50%;
+    background-size: cover;
+  }
+}
+html div.columns .col1 {
+  animation: leftBox 0.5s ease-out 4.5s 1 forwards, idleftBox 3s ease-in-out 6.5s 1 both;
+  position: relative;
+  background: url(./Riley.jpg) center;
+  background-size: cover;
+}
+@keyframes midBox {
+  from {
+    visibility: hidden;
+    transform: scaleX(0);
+  }
+  to {
+    visibility: visible;
+    transform: scaleX(1);
+    height: 90vh;
+  }
+}
+@keyframes idmidBox {
+  95% {
+    background: linear-gradient(#f8cfa1ba, #fabf7bba), url(./Huey.jpg) center;
+    background-blend-mode: overlay;
+    background-size: cover;
+  }
+  100% {
+    background: linear-gradient(#fcd6abba, #faa646ba), url(./Huey.jpg) center;
+    background-blend-mode: overlay;
+    background-size: cover;
+  }
+}
+html div.columns .col2 {
+  animation: midBox 0.5s ease-in 3s 1 forwards, idmidBox 3s ease-in-out 6.5s 1 both;
+  position: relative;
+  top: -20rem;
+  background: url(./Huey.jpg) center;
+  background-size: cover;
+}
+@keyframes rightBox {
+  from {
+    top: 0rem;
+    visibility: hidden;
+  }
+  50% {
+    top: -40rem;
+    visibility: hidden;
+  }
+  to {
+    top: -18rem;
+    visibility: visible;
+    height: 90vh;
+  }
+}
+@keyframes idrightBox {
+  95% {
+    background: linear-gradient(#c3ffdeba, #9cffc9ba), url(./Grandad.jpg) center;
+    background-position: 0% 50%;
+    background-blend-mode: overlay;
+    background-size: cover;
+  }
+  100% {
+    background: linear-gradient(#b8fcd6ba, #4ea776ba), url(./Grandad.jpg) center;
+    background-position: 0% 50%;
+    background-blend-mode: overlay;
+    background-size: cover;
+  }
+}
+html div.columns .col3 {
+  animation: rightBox 0.5s ease-out 5.5s 1 forwards, idrightBox 3s ease-in-out 6.5s 1 both;
+  position: relative;
+  background: url(./Grandad.jpg) center;
+  background-size: cover;
+}
+
+/*# sourceMappingURL=output.css.map */
